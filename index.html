@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/f.png" >
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <body bgcolor="#fcf9ee"></body>
+    <div class="wrap">
+        <header>
+            <div class="box">
+                <!--로고-->
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.png"
+                        alt="로고">
+                    </a>
+                </div>
+            
+                <!--내비게이션(2차원메뉴)-->
+                <nav>
+                    <ul>
+                        <li>
+                            <a herf="#">쇼핑하기</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li><a href="#">신제품</a>
+                                </li>
+                                <li><a href="#">센트</a>
+                                </li>
+                                <li><a href="#">코롱</a>
+                                </li>
+                                <li><a href="#">배스 앤 바디</a>
+                                </li>
+                                <li><a href="#">홈 프레그런스</a>
+                                </li>
+                                <li><a href="#">맨즈</a>
+                                </li>
+                            </ul>
+                        </li> <!--쇼핑하기-->
+                    
+                        <li>
+                            <a herf="#">선물하기</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li><a href="#">선물하기</a>
+                                </li>
+                                <li><a href="#">퍼스널라이제이션</a>
+                                </li>
+                                <li><a href="#">즐겨찾기</a>
+                                </li>
+
+                               
+                            </ul>
+                        </li> <!--선물하기-->
+                    
+                        <li>
+                            <a herf="#">조 말론 런던 하우스</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li><a href="#">조 말론 런던의 가치</a>
+                                </li>
+                                <li><a href="#">스토리</a>
+                                </li>
+                               
+                            </ul>
+                        </li> <!--스토리-->
+                    </ul>
+                        
+                </nav>
+                
+                
+
+                <!--로그인, 장바구니-->
+                <div class="top_menu">
+                    <ul>
+                        <li>
+                            <div class="accont">
+                                <a href="#">
+                                    <img src="img/account.png"
+                                    alt="로그인">
+                                </a>
+                            </div>
+                                
+                                </a>
+                                <div class="shoppingbag">
+                                    <a href="#">
+                                        <img src="img/shopping-bag.png"
+                                        alt="장바구니">
+                                    </a>
+                                </div>
+                                    
+                        </li>
+                    </ul>
+                    
+                    
+
+                </div>
+            </div>
+            <!--서브메뉴 배경은 .box 의 형제 객체로 코딩함. css에서는 부모나 부모의 형제를 제어하는 선택자가 없어서 제이쿼리로 제어해야함-->
+            <div class="sub_bg"</div>
+        </header>
+        <section class="s1">
+                <!--메인 비주얼의 이미지 영역(3개)-->
+                <div class="photo">
+                    <ul>
+                        <li><img src="img/main1.png" alt="스타브라이어트"> </li>
+                        <li><img src="img/main2.png" alt="잉글리쉬"> </li>
+                        <li><img src="img/main3.png" alt="사색"> </li>
+                    </ul>
+                </div>
+                <!--화면 왼쪽의 세로 막대-->
+                <div class="bar">
+                    <h3>JO MALONE LONDON</h3>
+
+                </div>
+                <!--설명과 번호와 play, pause 버튼 영역-->
+                <div class="des_box">
+                    <div class="des">
+                        <ul>
+                            <li>
+                                <h2>스타-브라이트 어드벤처 컬렉션</h2>
+                                <p>별들과 함께 즐기는 모험. 하트와 골드, 그리고 선물이 반짝이는 곳. 화려한 축제의 장.<br>
+                                    모두를 행복하게 만들어 줄 크리스마스 선물을 준비해보세요.</p>
+                            <li>
+                                <h2>잉글리쉬 페어 앤 프리지아 컬렉션</h2>
+                                <p>가을의 정수. 화이트 프리지아 부케향에 이제 막 익은 배의 신선함을 입히고<br>
+                                호박, 파슬리, 우디향으로 은은함을 더했습니다.</p>
+                            </li>
+                            <li>
+                                <h2>향수 전문 작가 닉 카벨의 사색</h2>
+                                <p>수 년 간 향에 대한 글을 쓰는 것을 업으로 살게 된 향수 전문 작가 닉 카벨의 사색</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <des class="number">
+                        <div class="num">
+                            <ul>
+                                <li> <a href="#" class="active">01</a> </li>
+                                <li> <a href="#">02</a> </li>
+                                <li> <a href="#">03</a> </li>
+                            </ul>
+
+                        </div>
+                        <div class="btn">
+                            
+
+                        </div>
+
+                    </des>
+
+                </div>
+                <!--scroll-->
+                <div class="scroll">
+
+                </div>
+        </section>
+        <section class="s2">
+            <div class="box">
+                <a href="#">
+                    <img src="img/christmas.png" alt="크리스마스 리미티드">
+                </a>
+            </div>
+            
+        </section>
+        <section class="s3">
+            <div class="product1">
+                <h1>
+                    <span>MAIN PRODUCT</span><br>               
+                
+                </h1>
+                <div class="product_title">
+                    <div class="product_des">
+                        <ul>
+                            <li class="d1">
+                                <h3><span>01</span>파인 앤 유칼립투스</h3>
+                                <p>신선한 소나무와 상쾌한 유칼립투스의 향기가 담긴
+                                    <br> 터질듯한 축제의 기운.</p>
+                                    <a href="#"><img src="img/plus-icon.png" alt="더하기"></a>
+                            </li>
+                            <li class="d2">
+                                <h3><span>02</span>타운하우스 컬렉션</h3>
+                                <p>런던 타운하우스 응접실의 갓 구운 디저트의 달콤함.<br>
+                                    정원 포도나무의 싱그러운 향기까지.<br>
+                                    조 말론 런던 타운하우스 공간의 향을 담은 세라믹 캔들과 디퓨저,<br>
+                                    타운하우스 컬렉션을 만나보세요.</p>
+                                    <a href="#"><img src="img/plus-icon.png" alt="더하기"></a>
+                            </li>
+                            <li class="d3">
+                                <h3><span>01</span>아카이브 컬렉션</h3>
+                                <p>런칭 이후 많은 사랑을 받았던 향들을 기념하는 조 말론 런던의 아카이브 컬렉션.<br>
+                                    시간이 흘러도 변치 않는 클래식한 가치를 지닌 특별한 프레그런스를 오직 온라인 부티크에서만 만나보세요.</p>
+                                    <a href="#"><img src="img/plus-icon.png" alt="더하기"></a>
+                            </li>
+                            </usl>
+                    </div>
+                    <div class="product_list">
+                        <ul>
+                            <li class="t1 active"><a href="#">파인 앤 유칼립투스</a></li>
+                            <li class="t2"><a href="#">타운하우스 컬렉션</a></li>
+                            <li class="t3"><a href="#">아카이브 컬렉션</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="product2">
+                <ul>
+                    <li class="img1"><img src="img/benner2.png" art="파인앤유칼립투스"></li>
+                    <li class="img2"><img src="img/benner3.png" art="타운하우스컬렉션"></li>
+                    <li class="img3"><img src="img/benner4.png" art="아카이브컬렉션"></li>
+                   
+
+                    
+                </ul>
+            </div>
+            
+        </section>
+        <section class="s4">
+            <div class="area">
+                <div class="new_bg">
+
+                </div>
+            <div class="new_des">
+                <div class="new_title">
+                    <h1>완벽한 선물</h1>
+                    
+                </div>
+                <p>박스 속 블랙 티슈의 바스락거림부터 아름다운 리본의 마무리까지 완벽함을 추구합니다.<br>
+                감사의 표시 혹은 배려하는 마음을 표현할 수 있도록,<br>
+                향만큼이나 아이코닉한 조 말론 런던의 시그니처 박스에 담아 선물해보세요.
+                </p>
+                <a href="#">
+                    <img src="img/plus-icon.png" alt=더알아보기>
+                </a>
+            </div>
+            <div>
+            <div class="new_list">  
+                <div class="swiper mySwiper">
+                    
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                            <!--이미지-->
+                            <div class="new_img">
+                                <img src="img/b1.png" alt="스탈릿만다린">
+                                </div>
+                                <p> <hr>크리스마스 에디션 <hr><br>
+                                스탈릿 만다린 앤 허니 코롱 <br>
+                            Starili Mandiarin & Honey Coonge</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                            <!--이미지-->
+                            <div class="new_img">
+                                <img src="img/b2.png" alt="화이트모스">
+                                </div>
+                                <hr>크리스마스 에디션 <hr><br>
+                                화이트 모스 앤 스노우드롭 코롱 <br>
+                            Withe Moss & Snow Coonge</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                        <!--이미지-->
+                        <div class="new_img">
+                            <img src="img/b3.png" alt="우드세이지">
+                            </div>
+                            <hr>크리스마스 에디션 <hr><br>
+                            우드 세이지 앤 씨 솔트 코롱 <br>
+                            wood sage & sea salt cologe</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                        <!--이미지-->
+                        <div class="new_img">
+                            <img src="img/b4.png" alt= "파인캔들">
+                            </div>
+                            <hr>크리스마스 에디션 <hr><br>
+                            파인 앤 유칼립투스 홈 캔들 <br>
+                            Pine & Eucaly Home Candle</p>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="#">
+                        <!--이미지-->
+                        <div class="new_img">
+                            <img src="img/b5.png" alt="오렌지비터스">
+                            </div>
+                            <hr>크리스마스 에디션 <hr><br>
+                            오렌지 비터스 코롱 <br>
+                            Orange Bitters cologe</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="s5">
+            <div class="box">
+                <div class="etc1">
+                    <h1>선물 포장</h1>
+                    <p>시그니처 박스에 정성스럽게 포장해 드립니다.</p>
+                
+
+                </div>
+                <div class="etc2">
+                    <h1>샘플</h1>
+                    <p>조 말론 런던의 새로운 향을 경험해보세요.</p>
+                    
+                </div>
+                <div class="etc3">
+                    <h1>무료 배송</h1>
+                    <p>향기로운 선물을 전달해드립니다.</p>
+                    
+                </div>
+            </div>
+            
+        </section>
+        <footer>
+            <div class="footer_box">
+                <div class="box">
+                    <div class="footer_list">
+                        <ul>
+                            <li>
+                                <a href="#">개인정보 처리방침</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="footer_box">
+                <div class="box">
+                    <div class="footer_left">
+                        © Jo Malone London 2021<br>
+                        <address>이엘씨에이한국(유) 대표: Teng, Hsiao-Hua (Catherine), 서울시 강남구 강남대로 382 (역삼동) 메리츠타워,<br> 06232
+                            사업자등록번호: 211-81-71889<br>
+                            통신판매업신고번호: 강남-15737호<br>
+                            사업자정보조회<br>
+                            고객관리지원팀: consumercare-kr@jomalone.com<br>
+                            호스팅서비스 사업자: ㈜엘지유플러스</address>
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>

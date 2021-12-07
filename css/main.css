@@ -1,0 +1,519 @@
+/*웹폰트 연결 - 눈누*/
+@font-face {
+    font-family: 'Arita-dotum-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+.kopubbatang * {
+ font-family: 'KoPub Batang', serif;
+}
+
+* { margin:0; padding:0; }
+li { list-style:none; display: block; color: #212121; font-family: "Arita-dotum-medium", sans-serlf; }
+a { text-decoration: none; display: block; color:#212121;}
+
+
+/*시맨틱 태그 선택자*/
+    body { font-family: 'Arita-dotum-medium', sans-serif }
+    header, section, footer {
+        width:100%;
+        float:left;
+    }
+    /*header, section, footer안의 직속 자식 개체, 항상 브라우저의 가운데 정렬*/
+    .box {
+        width:1200px;
+        margin : 0 auto;
+
+    }
+    /*이미지 크기는 부모 크기에 맞춤 상대 크기*/
+    img { width:100%; }
+    /*헤더*/
+    header {
+        position:fixed;
+        height:90px;
+        top:0;
+        left:0;
+        background-color: transparent; /*배경 투명*/
+        z-index: 40; /*section보다 위에 배치*/
+    }
+    /*화면이 아래로 내려가면 header 의 배경색 흰색으로 변함*/
+    header.active {
+        background-color: #fff;
+        box-shadow:0 5px #ccc;
+    }
+    /*로고*/
+    header .box .logo {
+        width:100px;
+        float:left;
+        margin:20px 0; /*위아래여백 : 10픽샐씩*/
+    }
+    /*내비게이션*/
+    header .box nav {
+        float:left; /*로고 옆에 배치*/
+        margin-left:230px; /*로고와의 거리*/
+        margin-top:40px; /*위쪽 여백*/
+        /*서브메뉴 배경보다 위에 있어야 함*/
+        position:relative;
+        z-index:60;
+
+    }
+    header .box .top_menu {
+        width: 30px;
+        height: 30px;
+        float:right;
+        margin-top:20px;
+    }
+
+    /*주메뉴*/
+    header .box nav > ul > li {
+        float:left;
+    }
+    header .box nav > ul > li > a {
+        font-size:16px;
+        padding:5px 40px;
+    }
+    header .box nav > ul > li:hover >a {
+        color: #999999;
+    }
+    /*서브메뉴*/
+    header .box nav .sub {
+        height:0;
+        transition: all 0.5s;
+        overflow: hidden; /*영역에서 벗아난 컨텐츠 숨김*/ 
+
+    }
+    header .box nav .sub li a{
+        text-align :center;
+        padding:15px;
+        font-size:14px;
+    }
+    /*첫번째 서브메뉴의 위쪽 여백 늘리기*/
+    header .box nav .sub li:first-child a {
+        padding-top: 70px;
+    }
+    header .box nav .sub li a:hover {
+        color: #999999;
+    }
+    /*주메뉴에 마우스 오버했을 때 서브메뉴 나옴*/
+    header .box nav:hover .sub {
+        height:200px; /*높이가 0에서 200픽셀로 0.5초 동안 변함*/
+    }
+    /* 서브메뉴 배경*/
+    header .sub_bg {
+        width:100%;
+        height: 290px;
+        background-color: #fcf9ee;
+        position:absolute;    /*서브메뉴와 겹침*/
+        top:80px;   /*위치설정*/
+        left: 0;
+        z-index:50;
+        display:none; /*숨김*/
+    }
+    /*로그인 회원가입*/
+    header .box .top_menu {
+        width:50px;
+        margin-top:40px;
+
+    }
+    header .box .top_menu ul li {
+        margin-right:20px;
+        
+    }
+    header .box .top_menu ul li a {
+        float: right;
+        padding:5px;
+        
+    }
+    /*메인비주얼*/
+    .s1 {
+        width:100%;
+        height :970px;
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    .s2 .photo {
+        width:100%;
+        height:970px;
+        position: relative; /*자식객체li들이 겹쳐질 때 photo를 기준으로 위치 설정*/
+    }
+    .s1 .photo ul li {
+        Position: absolute; /*겹침*/
+        width: 100%;
+        height:970px;
+        
+    }
+    /*메인 비주얼 왼쪽의 bar*/
+    .s1 .bar {
+        width: 100px;
+        height:1057px;
+        background-color: #212121;
+        position:absolute;
+        top:0;
+        left:0;
+        color: #fcf9ee;
+        opacity: 0.95; /*투명도*/
+        /*글자 h3 태그를 bar 영역의 가운데로 정렬*/
+        display: flex;
+        flex-flow:row nowrap;
+        justify-content: center;
+        align-items: center;
+        font-family: 'KoPub Batang', serif;
+    }
+    .s1 .bar h3 {
+        font-size:20px;
+        opacity:0.3;
+        transform:rotate(270deg); /*90도로 회전*/
+    }
+    /*메인 비주얼의 설명과 버튼*/
+    .s1 .des_box {
+        width:1100px;
+        bottom: 180px;
+        /*position:abwolute일 때 좌우 가운데 정렬 공식*/
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    .s1 .des_box .des {
+        height:100px;
+    }
+    .s1 .des_box .des ul li {
+        position: absolute;     /*li 겹침*/
+        display: none;
+    }
+    .s1 .des_box .des ul li:first-child {
+        display: block;
+    }
+    .s1 .des_box .des h2 {
+        font-weight:normal; /*굵지 않게*/
+        font-size: 37px;
+        font-family: 'KoPub Batang', serif;
+    }
+.s1 .des_box .des p {
+    color:#212121;
+    font-family: 'KoPub Batang', serif;
+
+    
+}
+.s1 .des_box .des a {
+    width:160px;
+    padding: 10px 20px;
+    border-radius :24px;
+    border: 1px solid #ccc;
+    text-align:center;
+    margin:30px 0;
+    
+
+}
+.s1 .des_box .des a:hover {
+    background-color: #efefef;
+}
+.s1 .des_box ._number div {
+    float:left;
+}
+.s1 .des_box .number .num ul li {
+    float:left;
+    padding:17px 17px 17px 0; /*위 오른쪽 아래 왼쪽*/
+
+}
+.s1 .des_box .number .num ul li a {
+    font-weight: bold;
+}
+/* number가 활성화되면 나타나는 밑줄 */
+.s1 .des_box .number .num ul li a.active:after {
+    content:"";
+    display: block;  /*인라인요소->블럭요소*/
+    width:100%;
+    height:3px;
+    margin-top: 5px;
+    background-color: #333;
+    
+}
+.s1 des_box .number .btn a{
+    width:16px;
+    height:16px;
+    float:left;
+    margin-top:3px;
+    margin-left:20px;
+    background-image: url() ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s1 .des_box .number .btn a.active {
+    background-image:  url();
+}
+.s2 {
+    margin-top: 300px;
+}
+/*MANI PRODUCT*/ 
+.s3 { position: relative; /*자식객체 .product2의 위치를 설정할 때 기준이 .s2(부모객체)가 되도록 설정*/}
+
+.s3 .area {
+    width: 1902px;
+    margin:0 auto;
+}
+.s3 .product1 {
+    width:1230px;
+    margin-top:260px;
+
+}
+.s3 .product1 h1 {
+    font-size:40px;
+    margin-left:350px;
+    line-height: 40px;
+    font-family: 'KoPub Batang', serif;
+    
+}
+.s3 .product1 hi span {
+    color :#fcf9ee;
+    font-size:20px;
+    
+}
+.s3 .product1 .product_title {
+    width:1230px;
+    height: 570px;
+    background-color: #212121;
+    border-radius:0 0 160px 0;
+    margin-top :30px;
+}
+.s3 .product1 .product_title .product_des {
+    margin-left:350px;
+    padding-top: 50px;
+    float: left;    /*product와 나란히 정렬*/
+    
+}
+
+.s3 .product1 .product_title .product_des ul li h3 {
+    color: #fcf9ee;
+    font-size:30px;
+    font-family: 'KoPub Batang', serif;
+
+}
+.s3 .product1 .product_title .product_des ul li h3 span {
+    opacity:0.2;
+    font-size:45px;
+    margin-right:10px;
+
+}
+.s3 .product1 .product_title .product_des ul li p {
+    color: #fcf9ee;
+    font-size:20px;
+    margin-top:10px;
+    font-family: 'KoPub Batang', serif;
+
+}
+/*더하기*/
+.s3 .product1 .product_title .product_des ul li a {
+    width:80px;
+    margin : 35px;
+    /* border: 1px solid #fcf9ee; */
+    text-align:center;
+    padding:10px;
+    margin-left : 0;
+    margin-top:20px;
+
+}
+/*모든 pruduct des ul li 안보임*/
+.s3 .product1 .product_title .product_des ul li {
+    display :none;
+    position: absolute;
+}
+/*첫번째 prodcut ul li 만 보임*/
+.s3 .product1 .product_title .product_des ul li:first-child {
+    display :block;
+}
+/*product_list*/
+.s3 .product1 .product_title .product_list {
+    float: left;    /*product_des와 나란히 정렬*/
+    margin-top: 200px;
+    margin-left:480px;
+}
+.s3 .product1 .product_title .product_list ul li {
+    width:200px;
+    border-bottom: 1px solid rgba(255, 255,255,0.3);
+}
+.s3 .product1 .product_title .product_list ul li a {
+    color :#fcf9ee;
+    font-size:20px;
+    padding:10px 0;
+    border-bottom:3px transparent;
+    padding-left:0;
+    opacity:0.5;
+}
+.s3 .product1 .product_title .product_list ul li.active a {
+    border-bottom : 3px solid #fcf9ee;
+    padding-left:30px;
+    opacity :1;
+}
+/*product2*/
+.s3 .product2 {
+    width:500px;
+    height:650px;
+    position:absolute;  /*product1과 겹침*/
+    top:200px;
+    left:55%;
+}
+.s3 .product2 ul li {
+    position: absolute;     /*이미지 겹침*/
+    display: none;      /*안보임*/
+}
+.s3 .product2 li:first-child {
+    display: block;
+}
+/*완벽한선물*/
+.s4 {position:relative;}
+.s4 .area {
+    width:1550px;
+    margin: 0 auto;
+    margin-top:130px;
+
+}
+.s4 .new_bg { 
+    float:left;
+    width:500px;
+    height:620px;
+    background-image: url(../img/benner.jpg);
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.s4 .new_des {
+    float:right;
+    padding: 70px;
+    margin-right: 100px;
+
+}
+.s4 .new_des .new_title {
+    width:100%;
+    margin-bottom: 20px;
+    float:right; /*new_title과 형제객체인 p영역 구분*/
+    font-size:30px;
+    font-family: 'KoPub Batang', serif;
+}
+.s4 .new_des h1 {
+    /*float:left; h1과 hr 가로로 나열*/
+    text-align: right;
+
+}
+.s4 .new_des a{
+    width:60px;
+    margin:50px;
+    margin-left:0;
+    float: right;
+
+}
+.s4 .new_des p {
+    text-align: right;
+    font-size :17px;
+    line-height:27px; /*줄간격*/
+    font-family: 'KoPub Batang', serif;
+}
+.s4 .new_list {
+    width:90%;
+    position :absolute; /*new_ tittle 영역과 겹침*/
+    left:0;
+    top:400px;
+}
+.s4 .new_list div div {
+    /* width:300px;
+    height:280px; */
+    text-align: center;
+    padding:30px;
+    line-height:27px;
+    box-sizing:border-box;
+    position:relative;  /*자식개체 p태그의 위치 잡을 때 li가 기준이 되도록 설정*/
+
+}
+.s4 .new_list div div .new_img {
+    width:60%;
+    height:260px;
+    margin: 0 auto;
+}
+.s4 .new_list div div hr {
+    width:60%;
+    margin:0 auto;
+}
+.s4 .new_list div div p {
+    width:200px;
+    text-align:center;
+    position: absolute;
+    padding: 5px;
+    white-space: nowrap;
+    top:0;
+    color:#fff;
+    left:50%;
+    transform: translateX;
+}
+
+.s5 .box {
+    margin-top:300px;
+    padding-bottom:250px;
+    text-align: center;
+    font-family: 'KoPub Batang', serif;
+    line-height:30px;
+    
+}
+
+.s5 .box .etc1 {
+    float: left;
+    margin-left: 30px;
+    padding-right: 30px;
+    border-right : 1px solid #999;
+
+    
+}
+.s5 .box .etc2 {
+    float: left;
+    margin-left:30px;
+    padding-right: 30px;
+    border-right : 1px solid #999;
+    
+}
+.s5 .box .etc3 {
+    float: left;
+    margin-left: 50px; 
+}
+/*footer*/
+footer .foorer_box {
+    width:100%;
+    float:left;
+}
+footer .footer_box:first-child {
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    height:45px;
+}
+footer .footer_box .box .footer_list ul li {
+    float:left;
+}
+footer .footer_box .box .footer_list ul li {
+    font-size:14px;
+    padding:15px;
+    color: #666;
+}
+footer .footer_box .box .footer_list ul li a:after {
+    content: "|"; /*파이프기호*/
+    margin-left: 30px;
+}
+/*.footer_list ul li의 마지막 li에서 파이프기호 없애기*/
+footer .footer_box .box .footer_list ul li:last-child a:after {
+    content:"";
+}
+footer .footer_box .box .footer_left {
+    float:left;
+    padding:50px 0;
+    color: #666;
+}
+footer .footer_box .box .footer_right {
+    width:150px;
+    float:right;
+    margin:10px 0;
+    
+}
